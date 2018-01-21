@@ -27,7 +27,7 @@ and have been shifting our company to standardize on a Python stack these days.
 ## Skills
 
 - **Front End**: HTML5/CSS3/ES6, SASS, JQuery, Bootstrap, Material Design
-- **Back End**: Python, DJango, Ruby on Rails, NodeJS, C#, MS SQL, PostgreSQL
+- **Back End**: Python, Django, Ruby on Rails, NodeJS, C#, MS SQL, PostgreSQL
 - **Scripting**: Bash, PowerShell, Python, Ruby
 - **DevOps**: VirtualBox, Heroku, AWS, S3, Docker
 
