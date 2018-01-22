@@ -1,9 +1,0 @@
-aside {
-  background-image: url("/images/cover.jpg");
-  background-position: center;
-}
-
-aside div img {
-  border-radius: 100%;
-  border: 3px solid #fff;
-}

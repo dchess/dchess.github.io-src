@@ -8,7 +8,7 @@ SITENAME = 'dchess'
 SITETITLE = 'D.C. Hess'
 SITESUBTITLE = 'Software Engineer'
 SITEDESCRIPTION = 'Code, code, and more code'
-THEME = '/media/dchess/hdd/projects/dchess/venv/lib/python3.5/site-packages/pelican/themes/flex'
+THEME = 'flex'
 SITELOGO = '/images/profile.jpg'
 FAVICON = '/images/favicon.ico'
 
