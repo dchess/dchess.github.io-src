@@ -1,99 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
+        <meta charset="utf-8" />
+        <title>Student Email Sync</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/font-awesome.min.css">
-
-    <link href="http://localhost:8000/static/custom.css" rel="stylesheet">
-
-
-
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-
-
-
-<meta name="author" content="dc.hess@gmail.com" />
-<meta name="description" content="Project Summary: Business Objective: To pull automatically generated student email addresses from our MS SQL data warehouse and push into production PowerSchool instances in multiple states. What I Built: A ruby script that connects to our data warehouse using an ActiveRecord adapter for SQL server, dynamically queries student records, and …" />
-<meta name="keywords" content="">
-
-<meta property="og:site_name" content="dchess"/>
-<meta property="og:title" content="Student Email Sync"/>
-<meta property="og:description" content="Project Summary: Business Objective: To pull automatically generated student email addresses from our MS SQL data warehouse and push into production PowerSchool instances in multiple states. What I Built: A ruby script that connects to our data warehouse using an ActiveRecord adapter for SQL server, dynamically queries student records, and …"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://localhost:8000/drafts/student-email-sync.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-05-31 17:17:00-07:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="http://localhost:8000/author/dchessgmailcom.html">
-<meta property="article:section" content="Projects"/>
-<meta property="og:image" content="/images/profile.jpg">
-
-  <title>dchess &ndash; Student Email Sync</title>
-
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="http://localhost:8000">
-        <img src="/images/profile.jpg" alt="D.C. Hess" title="D.C. Hess">
-      </a>
-      <h1><a href="http://localhost:8000">D.C. Hess</a></h1>
 
-<p>Software Engineer</p>
-      <nav>
-        <ul class="list">
-          <li><a href="http://localhost:8000/pages/about-me.html#about-me">About Me</a></li>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-me.html">About Me</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/drafts/student-email-sync.html" rel="bookmark"
+           title="Permalink to Student Email Sync">Student Email Sync</a></h1>
+    </header>
 
-        </ul>
-      </nav>
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-05-31T17:17:00-07:00">
+                Published: Tue 31 May 2016
+        </abbr>
 
-      <ul class="social">
-        <li><a class="sc-github" href="https://www.github.com/dchess" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-twitter" href="https://twitter.com/dc_hess" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/dchess" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-envelope-o" href="mailto:dc.hess@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
-      </ul>
-    </div>
+<p>In <a href="/category/projects.html">Projects</a>.</p>
 
-
-  </aside>
-  <main>
-
-    <nav>
-      <a href="http://localhost:8000">    Home
-</a>
-
-      <a href="/category/projects.html">Projects</a>
-
-
-    </nav>
-
-<article class="single">
-  <header>
-      
-    <h1 id="student-email-sync">Student Email Sync</h1>
-    <p>
-          Posted on Tue 31 May 2016 in <a href="http://localhost:8000/category/projects.html">Projects</a>
-
-
-    </p>
-  </header>
-
-
-  <div>
-    <p><img alt="PowerSchool" src="/images/powerschool.png"></p>
+</footer><!-- /.post-info -->      <p><img alt="PowerSchool" src="/images/powerschool.png"></p>
 <h2>Project Summary:</h2>
 <h3>Business Objective:</h3>
 <p>To pull automatically generated student email addresses from our MS SQL data warehouse and push into production PowerSchool instances in multiple states.</p>
@@ -206,53 +148,27 @@ The PowerSchool Student API expects JSON in a non standard JSON format. That is 
   <span class="n">exit</span> <span class="n">1</span>
 <span class="p">}</span>
 </pre></div>
-  </div>
-  <div class="tag-cloud">
-    <p>
-    </p>
-  </div>
+    </div><!-- /.entry-content -->
 
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-    <div class="addthis_relatedposts_inline">
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-
-<!-- Disqus -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'dchess-org';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>
-        Please enable JavaScript to view comments.
-
-</noscript>
-<!-- End Disqus -->
-</article>
-
-    <footer>
-<p>&copy;  </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " dchess ",
-  "url" : "http://localhost:8000",
-  "image": "/images/profile.jpg",
-  "description": "Code, code, and more code"
-}
-</script>
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
 </body>
 </html>
