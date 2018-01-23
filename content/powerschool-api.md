@@ -1,7 +1,6 @@
 Title: Student Email Sync
 Date: 2016-05-31 17:17:00 -0700
 Category: Projects
-Status: draft
 
 ![PowerSchool](/images/powerschool.png)
 
