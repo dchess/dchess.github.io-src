@@ -1,7 +1,7 @@
 Title: Student Email Sync
 Date: 2016-05-31 17:17:00 -0700
 Category: Projects
-Status: draft
+Summary: Ruby script to sync student emails between data warehouse and Powerschool nightly.
 
 ![PowerSchool](/images/powerschool.png)
 
