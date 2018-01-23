@@ -93,12 +93,113 @@
 
 
   <div>
-    <h1>Getting Around in the Terminal</h1>
-<h1>Python Interactive Shell</h1>
-<h1>Expressions and Operators</h1>
-<h1>Variables and Data Types</h1>
-<h1>Read the Errors</h1>
-<h1>Playing with Strings</h1>
+    <ol>
+<li><a href="#getting-around-in-the-terminal">Getting Around in the Terminal</a></li>
+<li><a href="#python-interactive-shell">Python Interactive Shell</a></li>
+<li><a href="#expressions-and-operators">Expressions and Operators</a></li>
+<li><a href="#hello-world!">Hello World!</a></li>
+<li><a href="#variables-and-data-types">Variables and Data Types</a></li>
+<li><a href="#read-the-errors">Read the Errors</a></li>
+<li><a href="#playing-with-strings">Playing with Strings</a></li>
+<li><a href="#a-simple-madlib">A Simple Madlib</a></li>
+</ol>
+<h1><a id="getting-around-in-the-shell"></a>Getting Around in the Terminal</h1>
+<h2>Where Am I?</h2>
+<p>Type the following to figure out where you are currently in the file system.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+/home/username
+</pre></div>
+
+
+<p>It stands for "print working directory".</p>
+<h2>What's here?</h2>
+<p>The following shows you what files and folders are available in the current
+directory.</p>
+<div class="highlight"><pre><span></span>$ ls
+projects  file.txt
+</pre></div>
+
+
+<p>It's short for "list".</p>
+<h2>Go Somewhere Else</h2>
+<p>To move into another directory, use the cd command followed by the name of the
+folder you want to move to.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> projects/
+</pre></div>
+
+
+<p>It stands for "change directory".</p>
+<h2>A Few Variations</h2>
+<h1><a id="python-interactive-shell"></a>Python Interactive Shell</h1>
+<div class="highlight"><pre><span></span>$ python3
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.5</span><span class="o">.</span><span class="mi">2</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">23</span> <span class="mi">2017</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mo">01</span><span class="p">)</span> 
+<span class="p">[</span><span class="n">GCC</span> <span class="mf">5.4</span><span class="o">.</span><span class="mi">0</span> <span class="mi">20160609</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+
+<p>To get back to the terminal from the Python shell:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">exit</span><span class="p">()</span>
+</pre></div>
+
+
+<h1><a id"expressions-and-operators"></a>Expressions and Operators</h1>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+
+<h1><a id="hello-world!"></a>Hello World!</h1>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+
+<h1><a id="variables-and-data-types"></a>Variables and Data Types</h1>
+<h2>Data Types</h2>
+<ul>
+<li>String</li>
+<li>Integer</li>
+<li>Float</li>
+</ul>
+<h2>Operators</h2>
+<h2>Type()</h2>
+<h1><a id="read-the-errors"></a>Read the Errors</h1>
+<h2>Syntax Error</h2>
+<h2>Type Error</h2>
+<h2>Name Error</h2>
+<h2>Semantic Error</h2>
+<h1><a id="playing-with-strings"></a>Playing with Strings</h1>
+<h2>String Operators</h2>
+<h2>String Methods</h2>
+<h2>Long Strings</h2>
+<h1><a id="a-simple-madlib"></a>A Simple Madlib</h1>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="n">exclamation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Type an exclamation...&quot;</span><span class="p">)</span>
+<span class="n">adverb</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Type an adverb..&quot;</span><span class="p">)</span>
+<span class="n">noun</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Type a noun...&quot;</span><span class="p">)</span>
+<span class="n">adjective</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Type an adjective...&quot;</span><span class="p">)</span>
+
+<span class="n">madlib</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="n">exclamation</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> 
+  <span class="s2">&quot;! he said &quot;</span> <span class="o">+</span> 
+  <span class="n">adverb</span> <span class="o">+</span> 
+  <span class="s2">&quot; as he jumped into his convertible &quot;</span> <span class="o">+</span> 
+  <span class="n">noun</span> <span class="o">+</span> 
+  <span class="s2">&quot; and drove off with his &quot;</span> <span class="o">+</span> 
+  <span class="n">adjective</span> <span class="o">+</span> 
+  <span class="s2">&quot; wife.&quot;</span>
+<span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">madlib</span><span class="p">)</span>
+</pre></div>
   </div>
   <div class="tag-cloud">
     <p>
