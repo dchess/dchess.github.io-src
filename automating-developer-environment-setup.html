@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="./static/custom.css" rel="stylesheet">
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="dc.hess@gmail.com" />
+<meta name="description" content="Scripting my setup for development has made my life easier" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="dchess"/>
+<meta property="og:title" content="Automating Developer Environment Setup"/>
+<meta property="og:description" content="Scripting my setup for development has made my life easier"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./automating-developer-environment-setup.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-02-18 13:30:00-08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/dchessgmailcom.html">
+<meta property="article:section" content="Blog"/>
+<meta property="og:image" content="/images/profile.jpg">
+
+  <title>dchess &ndash; Automating Developer Environment Setup</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="/images/profile.jpg" alt="D.C. Hess" title="D.C. Hess">
+      </a>
+      <h1><a href=".">D.C. Hess</a></h1>
+
+<p>Software Engineer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about-me.html#about-me">About Me</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://www.github.com/dchess" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/dc_hess" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/dchess" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-envelope-o" href="mailto:dc.hess@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">    Home
+</a>
+
+      <a href="/category/projects.html">Projects</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="automating-developer-environment-setup">Automating Developer Environment Setup</h1>
+    <p>
+          Posted on Sun 18 February 2018 in <a href="./category/blog.html">Blog</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>I develop on Linux. Ubuntu to be specific. Most of the web apps I build I end
+up deploying to Heroku. Since their stack is based on Ubuntu and Postgres, I 
+try to make my local environment as close to production as possible. </p>
+<p>That means I don't use simpler development databases like SQLite in my local
+setup and I don't build on Windows or Mac and then hope my code will deploy
+properly in production. I don't want any suprises!</p>
+<p>To that effect, I try to automate my setup as much as possible. </p>
+<p>For work, I develop within a Linux virtual machine (using Virtualbox). At home, 
+I'm already using linux as my main os. But I want my setup, tools, and 
+configurations to be identical no matter where I am working. I also want to be
+able to spin up a new VM at a moment's notice and be ready to go in no time.</p>
+<p>To help facilitate that need, I have a <a href="https://github.com/dchess/dev-env-setup">github repo</a>
+where I store my dotfiles and a few shell scripts to easily setup my
+development environment. </p>
+<p>I prefer to work in the terminal as much as possible and so I use Vim as my
+text editor with a few custom configurations to emulate some IDE like features.</p>
+<p>I also prefer to handle version control with git in the terminal and have a few
+custom aliases I like to make sure are available wherever I'm working.</p>
+<p>But the most valuable script I have is my database setup script. Installing
+Postgres can be daunting, particularly at the start of a new project. I don't
+want that to be a hindrance for myself or other developers on my team. While I
+have a generic postgres setup script, I also have a more custom one for use in
+Django web apps that I store in the source code of each app I deploy. That can
+be a huge help when handing off to another developer on the team, so they have
+exactly the same database configuration as every other developer working on the
+project, with single button deployment.</p>
+<h1>VIM Config</h1>
+<p>My Vim config is pretty simple compared to many I've seen, but there are a few
+things I can't live without. I was big on Sublime before I moved to Vim and so
+I really appreciate having a fuzzy finder and file tree available. So I use
+NERDTree and CtrlP for that. I also like being able to easily comment blocks of
+code and use NERDCommenter for that. </p>
+<p>As I've shifted to using Python more, I found <a href="https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/">this tutorial from Real Python</a>
+really helpful for thinking about how I wanted Vim configured to better support
+Python specifically. The main call outs are white space config (both indents and
+trailing whitespace), code-completion, and PEP8 compliance. Using static 
+analysis tools like Flake8 has greatly cut down on the need for those arguments
+during code review.</p>
+<p>Beyond those Vundle plugins, I keep a copy of my current .vimrc file in my repo
+for easy syncing. If I make a change locally, I push it to the repo so I can
+pull it down in any other environment I'm working in. I also like a certain
+color scheme and run a support script during setup to ensure both my terminal
+and Vim use the same colors. It cuts down on context switching when I have to 
+hop in and out of my editor to run commands.</p>
+<h1>Git Config</h1>
+<p>My git settings mostly consist of setting up my editor to be Vim by default and
+a series of helpful aliases. I drew a lot of inspiration from
+<a href="https://haacked.com/archive/2014/07/28/github-flow-aliases/">this article from You've Been Haacked</a>.</p>
+<p>I use the quick commit and pretty formatted git log constantly. Likewise the
+grep functionality for the commit history is incredibly useful.</p>
+<h1>Bash Config</h1>
+<p>My .bashrc is pretty standard, with one key exception. I really like being
+able to see the git branch name in my prompt. I incorporated
+<a href="https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt">this tip from Coderwall</a>,
+which couldn't be any easier. Other than that I mostly have aliases to quickly
+jump to current project directories I'm working on. Although lately, I've been
+experimenting with some aliases for Django. Typing out <code>python manage.py runserver</code>
+or even <code>./manage.py makemigrations</code> all the time can be a little tedious. I
+know I could use <a href="https://github.com/jgorset/django-shortcuts">django-shortcuts</a>
+but it really seems like a bash function ought to be able to handle my needs. </p>
+<h1>Postgres Installation</h1>
+<p>When I first was working in Rails and trying to set up PostgreSQL, I had a lot
+of hiccups initially. I'd install with the wrong account permissions, or I was
+missing some dependency. I'd get it configured, then port to a new system and 
+have to spend time trying to get it all back to working order. It was a serious
+headache.</p>
+<p>Then, I found this great resource for installing Ruby on Rails on Ubuntu from 
+<a href="https://gorails.com/setup/ubuntu/16.04">Go Rails</a> which had a small aside
+about Postgres. I was inspired by the simplicity of their directions and
+<a href="https://github.com/dchess/dev-env-setup/blob/master/rails.sh">translated it into a shell script</a>
+to automate it. </p>
+<p>While I have since largely put Rails behind me (I still have a few legacy apps
+that I maintain), I am absolutely indebted to the advice about databse setup.</p>
+<p>Just to show how simple this is, here is my postgre setup script. It's 7 lines.</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">user</span><span class="o">=</span><span class="k">$(</span>whoami<span class="k">)</span>
+
+sudo sh -c <span class="s2">&quot;echo &#39;deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main&#39; &gt; /etc/apt/sources.list.d/pgdg.list&quot;</span>
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc <span class="p">|</span> sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y postgresql-common
+sudo apt-get install -y postgresql libpq-dev
+
+sudo -u postgres createuser <span class="nv">$user</span> -s
+</pre></div>
+
+
+<p>It does all the heavy lifting. Figures out what account I am installing with,
+gets the necessary repository info, installs postgres, and even sets up a user
+based on my account to access it with. </p>
+<p>I've taken this idea a little further for Django and now run something a
+little more complicated. </p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Exit if command fails</span>
+<span class="nb">set</span> -e
+<span class="c1"># Treat unset variables as errors</span>
+<span class="nb">set</span> -u
+
+<span class="c1"># Set user as current account</span>
+<span class="nv">user</span><span class="o">=</span><span class="k">$(</span>whoami<span class="k">)</span>
+
+<span class="c1"># Install Postgres 10</span>
+sudo sh -c <span class="s2">&quot;echo &#39;deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main&#39; &gt;&gt; /etc/apt/sources.list.d/pgdg.list&quot;</span>
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="p">|</span> sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y postgresql-common
+sudo apt-get install -y postgresql-10 postgresql-contrib libpq-dev
+
+<span class="c1"># Create superuser account as self for local management</span>
+sudo -u postgres createuser <span class="nv">$user</span> -s
+
+<span class="c1"># Set env vars for colors</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s1">&#39;\033[1;33m&#39;</span>
+<span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span>
+
+<span class="c1"># Collect arguments from user</span>
+<span class="c1"># Project specific values</span>
+<span class="nb">printf</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Database name:\n</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">read</span> database
+<span class="nb">printf</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Username:\n</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">read</span> username
+<span class="nb">printf</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Password:\n</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">read</span> password
+
+<span class="c1"># Create database and user</span>
+<span class="nv">RUN_ON_PSQL</span><span class="o">=</span><span class="s2">&quot;psql -X -U </span><span class="nv">$user</span><span class="s2"> --set ON_ERROR_STOP=on --set AUTOCOMMIT=off postgres&quot;</span>
+<span class="nv">$RUN_ON_PSQL</span> <span class="s">&lt;&lt;SQL</span>
+<span class="s">CREATE DATABASE $database;</span>
+<span class="s">CREATE USER $username WITH PASSWORD &#39;$password&#39;;</span>
+<span class="s">ALTER ROLE $username SET client_encoding TO &#39;utf8&#39;;</span>
+<span class="s">ALTER ROLE $username SET default_transaction_isolation TO &#39;read committed&#39;;</span>
+<span class="s">ALTER ROLE $username SET timezone TO &#39;UTC&#39;;</span>
+<span class="s">GRANT ALL PRIVILEGES ON DATABASE $database TO $username; </span>
+<span class="s">ALTER USER $username CREATEDB;</span>
+<span class="s">commit;</span>
+<span class="s">SQL</span>
+
+<span class="nb">exit</span> <span class="m">0</span>
+</pre></div>
+
+
+<p>Now my team can clone my repo, run this app and be good to go in seconds. It
+could not be any easier to hand off my code!</p>
+<h1>Conclusion</h1>
+<p>There are always ways to automate your workflow. I am constantly on the look
+out for ways I can take the guess work out of my development configuration.</p>
+<p>There are other things I rely on that I haven't mentioned here in detail (but 
+you can find them in my <a href="https://github.com/dchess/dev-env-setup">repo</a>) like
+installing <a href="https://devcenter.heroku.com/articles/heroku-cli">Heroku CLI</a> or 
+<a href="https://ngrok.com/">ngrok</a>. </p>
+<p>I keep adding more automation to my setup as I go. In fact, I'm pretty sure 
+that's my most active public repo!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dchess-org';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " dchess ",
+  "url" : ".",
+  "image": "/images/profile.jpg",
+  "description": "Code, code, and more code"
+}
+</script>
+
+</body>
+</html>
