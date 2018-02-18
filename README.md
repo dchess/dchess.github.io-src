@@ -5,7 +5,8 @@
 - Pipenv
 - Python
 - Pelican
-- Pelican Themese
+- Pelican Themes
+- ghp-import
 - Markdown
 - Flex theme
 
