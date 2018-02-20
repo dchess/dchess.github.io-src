@@ -39,7 +39,7 @@ MAIN_MENU= True
 MENUITEMS = (('Projects', '/category/projects.html'),)
 
 # Blogroll
-LINKS = ()
+LINKS = (('resume', 'https://drive.google.com/file/d/1O0-Le26SdL-DhDo2LsOQVWR5BAV4I17F/view'),)
 
 # Social widget
 SOCIAL = (('github', 'https://www.github.com/dchess'),
