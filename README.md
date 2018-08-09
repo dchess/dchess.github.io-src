@@ -26,3 +26,10 @@ Switch to the output directory and launch the server:
 $ cd /output
 $ python -m pelican.server
 ```
+
+## Githook
+
+Add the following hook to local .git/hooks:
+```bash
+pelican content -o output -s pelicanconf.py && ghp-import && git pub
+```
