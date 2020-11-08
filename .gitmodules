@@ -2,9 +2,6 @@
 	path = output
 	url = https://github.com/dchess/dchess.github.io.git
     ignore = all
-[submodule "themes"]
-	path = themes
-	url = https://github.com/alexandrevicenzi/Flex.git
 [submodule "themes/flex"]
 	path = themes/flex
 	url = https://github.com/alexandrevicenzi/Flex.git
