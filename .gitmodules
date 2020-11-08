@@ -1,4 +1,4 @@
 [submodule "output"]
 	path = output
 	url = https://github.com/dchess/dchess.github.io.git
-	ignore = all
+    ignore = all
