@@ -22,7 +22,7 @@ Switch to the output directory and launch the server:
 $ pipenv run pelican --listen
 ```
 
-## Publish SIte
+## Publish Site
 
 ```
 $ pipenv run pelican -s publishconf.py

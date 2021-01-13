@@ -1,12 +1,9 @@
 [[source]]
-
 verify_ssl = true
 name = "pypi"
 url = "https://pypi.python.org/simple"
 
-
 [packages]
-
 pelican = "*"
 markdown = "*"
 ghp-import = "*"
@@ -14,12 +11,10 @@ pelican-jupyter = "*"
 notebook = ">=6"
 nbconvert = ">=5,<6.0"
 ipykernel = "*"
-
+pandas = "*"
+faker = "*"
 
 [requires]
-
 python_version = "3.8"
 
-
 [dev-packages]
-
