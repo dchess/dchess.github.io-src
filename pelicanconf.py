@@ -21,7 +21,6 @@ EXTRA_PATH_METADATA = {
 
 CUSTOM_CSS = "static/custom.css"
 
-DISQUS_SITENAME = "dchess-org"
 PATH = "content"
 
 TIMEZONE = "America/Los_Angeles"
@@ -36,7 +35,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 MAIN_MENU = True
-MENUITEMS = (("Projects", "/category/projects.html"),)
+MENUITEMS = (
+    ("Projects", "/category/projects.html"),
+    ("Tutorial", "/category/tutorial.html"),
+    )
 
 # Blogroll
 LINKS = (
@@ -51,7 +53,6 @@ SOCIAL = (
     ("github", "https://www.github.com/dchess"),
     ("twitter", "https://twitter.com/dc_hess"),
     ("linkedin", "https://www.linkedin.com/in/dchess"),
-    ("envelope-o", "mailto:dc.hess@gmail.com"),
 )
 
 DEFAULT_PAGINATION = 10
