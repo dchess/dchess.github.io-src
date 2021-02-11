@@ -38,7 +38,7 @@ MAIN_MENU = True
 MENUITEMS = (
     ("Projects", "/category/projects.html"),
     ("Tutorial", "/category/tutorial.html"),
-    )
+)
 
 # Blogroll
 LINKS = (
@@ -46,6 +46,7 @@ LINKS = (
         "resume",
         "https://drive.google.com/file/d/1O0-Le26SdL-DhDo2LsOQVWR5BAV4I17F/view",
     ),
+    ("SQLSorcery", "https://sqlsorcery.readthedocs.io/en/latest/"),
 )
 
 # Social widget
